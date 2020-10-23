@@ -9,7 +9,7 @@ namespace {
     AddCall() : ModulePass(ID) {}
 
     bool runOnModule(Module &M) override {
-      errs() << "Hello: ";
+      errs() << "Not Implemented ";
       errs().write_escaped(M.getName()) << '\n';
       return false;
     }
