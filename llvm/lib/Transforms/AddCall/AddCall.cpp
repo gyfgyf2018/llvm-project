@@ -21,4 +21,4 @@ namespace {
 char AddCall::ID = 0;
 static RegisterPass<AddCall> X("addc", "Add an extern function call in main");
 
-llvm::ModulePass *createAddCallPass() { return new AddCall(); }
+ModulePass *createAddCallPass() { return new AddCall(); }
