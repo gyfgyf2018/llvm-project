@@ -46,6 +46,7 @@
 #include "llvm/Transforms/Vectorize.h"
 #include "llvm/Transforms/Vectorize/LoopVectorize.h"
 #include "llvm/Transforms/Vectorize/SLPVectorizer.h"
+#include "llvm/Transforms/AddCall.h"
 
 using namespace llvm;
 
@@ -440,6 +441,9 @@ void PassManagerBuilder::populateModulePassManager(
 
   // Allow forcing function attributes as a debugging and tuning aid.
   MPM.add(createForceFunctionAttrsLegacyPass());
+  
+  //MyPass Insert
+  MPM.add(createAddCallPass());
 
   // If all optimizations are disabled, just run the always-inline pass and,
   // if enabled, the function merging pass.
