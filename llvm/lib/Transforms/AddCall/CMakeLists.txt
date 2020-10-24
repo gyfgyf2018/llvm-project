@@ -1,4 +1,4 @@
-add_llvm_library( AddCall
+add_llvm_library( LLVMAddCall
   AddCall.cpp
   
   ADDITIONAL_HEADER_DIRS
